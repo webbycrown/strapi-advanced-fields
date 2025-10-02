@@ -1,0 +1,89 @@
+{
+  "name": "@webbycrown/advanced-fields",
+  "version": "1.0.0",
+  "keywords": [
+    "strapi",
+    "plugin",
+    "custom-fields",
+    "advanced-input",
+    "advanced-checkbox",
+    "advanced-radio",
+    "validation",
+    "form-fields",
+    "dynamic-options",
+    "user-friendly"
+  ],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "source": "./admin/src/index.js",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": "./strapi-server.js"
+  },
+  "files": [
+    "admin",
+    "strapi-server.js",
+    "strapi-server.mjs",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:admin",
+    "build:admin": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify"
+  },
+  "dependencies": {
+    "@strapi/design-system": "^2.0.0-rc.21",
+    "@strapi/icons": "^2.0.0-rc.23",
+    "react-color": "^2.19.3",
+    "react-intl": "^7.1.11",
+    "react-router-dom": "^6.30.0"
+  },
+  "devDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5.12.5",
+    "prettier": "^3.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.17"
+  },
+  "peerDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5.12.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.17"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "advanced-fields",
+    "displayName": "Advanced Fields",
+    "description": "Professional custom fields for Strapi: Advanced Input with validation, Advanced Checkbox (single/multiple), and Advanced Radio (single/multiple) with dynamic options and comprehensive configuration"
+  },
+  "description": "Professional custom fields for Strapi: Advanced Input with validation, Advanced Checkbox (single/multiple), and Advanced Radio (single/multiple) with dynamic options and comprehensive configuration",
+  "license": "MIT",
+  "author": {
+    "name": "WebbyCrown",
+    "email": "info@webbycrown.com",
+    "url": "https://webbycrown.com"
+  },
+  "homepage": "https://github.com/webbycrown/strapi-advanced-fields",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webbycrown/strapi-advanced-fields.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webbycrown/strapi-advanced-fields/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
