@@ -1,6 +1,6 @@
 {
   "name": "@webbycrown/advanced-fields",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "keywords": [
     "strapi",
     "plugin",
@@ -25,18 +25,13 @@
     "./strapi-server": "./strapi-server.js"
   },
   "files": [
-    "dist/",
-    "strapi-server.js",
-    "strapi-server.mjs",
-    "index.js",
+    "dist",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "npm run build:admin && npm run copy:translations",
+    "build": "npm run build:admin",
     "build:admin": "strapi-plugin build",
-    "copy:translations": "cp -r admin/src/translations dist/admin/",
-    "prepublishOnly": "npm run build",
     "watch": "strapi-plugin watch",
     "watch:link": "strapi-plugin watch:link",
     "verify": "strapi-plugin verify"

@@ -1,0 +1,16 @@
+node_modules
+dist
+build
+admin
+coverage
+.tmp
+.cache
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vscode
+.idea
+.DS_Store

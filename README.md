@@ -57,6 +57,13 @@ yarn add @webbycrown/advanced-fields
    - Advanced Checkbox
    - Advanced Radio
 
+
+## 📺 Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/-WRuUEWwGfk/hqdefault.jpg)](https://www.youtube.com/watch?v=-WRuUEWwGfk)
+- [Watch on YouTube](https://www.youtube.com/watch?v=-WRuUEWwGfk)
+
+
 ## 📖 Usage Examples
 
 ### Advanced Input Configuration

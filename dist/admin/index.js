@@ -19,6 +19,9 @@ const __variableDynamicImportRuntimeHelper = (glob, path, segs) => {
   });
 };
 const PLUGIN_ID = "advanced-fields";
+const PluginIcon = (props) => {
+  return /* @__PURE__ */ jsxRuntime.jsx(AdvancedRadioIcon, { ...props });
+};
 const AdvancedInputIcon = () => /* @__PURE__ */ jsxRuntime.jsx(
   designSystem.Box,
   {
@@ -121,7 +124,7 @@ const customFields = [
     type: "string",
     icon: AdvancedInputIcon,
     pluginId: PLUGIN_ID,
-    component: () => Promise.resolve().then(() => require("../_chunks/index-lJs3vGYF.js")),
+    component: () => Promise.resolve().then(() => require("../_chunks/index-AT-E0hrg.js")),
     intlLabel: {
       id: `${PLUGIN_ID}.input.label`,
       defaultMessage: "Advanced Input"
@@ -794,6 +797,15 @@ const index = {
   register(app) {
     if (!app.customFields) {
       return;
+    }
+    try {
+      app.registerPlugin({
+        id: PLUGIN_ID,
+        name: "Advanced Fields",
+        icon: PluginIcon,
+        isReady: true
+      });
+    } catch (e) {
     }
     customFields.forEach((field) => {
       try {
