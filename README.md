@@ -275,9 +275,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📊 Changelog
 
 ### v1.0.1
-- 🐛 Fixed minor bugs in field validation
-- 📝 Updated README to include Demo Video section
-- ⚡ Improved documentation clarity for plugin setup and usage
+- 📝 Updated the README file.
+- ✨ Improved clarity and formatting for better readability.
 
 ### v1.0.0
 - ✨ Initial release
