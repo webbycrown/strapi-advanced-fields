@@ -274,6 +274,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Changelog
 
+### v1.0.3
+- 📝 Documentation updates and minor formatting improvements.
+
 ### v1.0.2
 - 🐛 Fixed bugs.
 - 🛠️ Resolved minor issues affecting
