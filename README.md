@@ -274,12 +274,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Changelog
 
+### v1.0.2
+- 🐛 Fixed bugs.
+- 🛠️ Resolved minor issues affecting
+
 ### v1.0.1
 - 📝 Updated the README file.
 - ✨ Improved clarity and formatting for better readability.
 
 ### v1.0.0
-- ✨ Initial release
+- ✨ Initial release  
 - 🔤 Advanced Input field with validation
 - ☑️ Advanced Checkbox (single/multiple)
 - 🔘 Advanced Radio (single/multiple)
