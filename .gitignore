@@ -11,13 +11,14 @@ admin
 # Testing
 coverage/
 .npmignore
+
 # Documentation
 CHANGELOG.md
 CONTRIBUTING.md
 
 # Environment and local config
 .env
-.env.*
+.env.*  
 .eslintcache
 .turbo/
 

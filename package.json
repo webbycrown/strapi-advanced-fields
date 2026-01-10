@@ -25,9 +25,10 @@
     "./strapi-server": "./strapi-server.js"
   },
   "files": [  
-    "dist",
+    "dist", 
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "assets"
   ],
   "scripts": {
     "build": "npm run build:admin",
