@@ -10,7 +10,7 @@ build/
 admin
 # Testing
 coverage/
-
+.npmignore
 # Documentation
 CHANGELOG.md
 CONTRIBUTING.md

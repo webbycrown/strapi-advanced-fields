@@ -12,11 +12,11 @@ Professional custom fields for Strapi CMS that provide advanced functionality wi
 
 A short introduction and quick overview of **Advanced Fields for Strapi**, showcasing available field types, configuration options, and real-world usage inside the Strapi admin panel.
 
-[![Watch the demo](https://img.youtube.com/vi/-WRuUEWwGfk/hqdefault.jpg)](https://www.youtube.com/watch?v=-WRuUEWwGfk)
+[![Watch the demo](assets/advanced-fields-play.png)](https://www.youtube.com/watch?v=-WRuUEWwGfk)
 
 ▶️ **[Watch Full Video on YouTube](https://www.youtube.com/watch?v=-WRuUEWwGfk)**
 
----
+---     
 
 ## ✨ Features
 

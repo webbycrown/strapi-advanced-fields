@@ -1,6 +1,6 @@
 {
   "name": "@webbycrown/advanced-fields",
-  "version": "1.0.5",
+  "version": "1.0.4",
   "keywords": [
     "strapi",
     "plugin",
@@ -24,7 +24,7 @@
     },
     "./strapi-server": "./strapi-server.js"
   },
-  "files": [
+  "files": [  
     "dist",
     "README.md",
     "LICENSE"
