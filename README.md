@@ -274,6 +274,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Changelog
 
+### v1.0.5
+- 📝 Updated the README to include the YouTube demo video link.
+
 ### v1.0.4
 - 🐛 Fixed minor bugs in field validation
 - 📝 Updated README to include Demo Video section
