@@ -12,7 +12,12 @@ Professional custom fields for Strapi CMS that provide advanced functionality wi
 
 A short introduction and quick overview of **Advanced Fields for Strapi**, showcasing available field types, configuration options, and real-world usage inside the Strapi admin panel.
 
-[![Watch the demo](https://raw.githubusercontent.com/webbycrown/strapi-advanced-fields/main/assets/advanced-fields-play-img.png)](https://www.youtube.com/watch?v=-WRuUEWwGfk)
+
+<div style="margin: 20px 0" align="center">
+  <a href="https://www.youtube.com/watch?v=-WRuUEWwGfk">
+    <img style="width: 100%; height: auto;" src="https://raw.githubusercontent.com/webbycrown/strapi-advanced-fields/main/assets/advanced-fields-play-img.png" alt="Watch the demo" />
+  </a>
+</div>  
 
 ▶️ **[Watch Full Video on YouTube](https://www.youtube.com/watch?v=-WRuUEWwGfk)**
 
@@ -273,6 +278,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to all contributors and users
 
 ## 📊 Changelog
+
+
+### v1.0.6
+- 📝 Updated the README to properly display the YouTube preview image in Any documentation.
 
 ### v1.0.5
 - 📝 Updated the README to include the YouTube demo video link.
