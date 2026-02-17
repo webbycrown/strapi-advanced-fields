@@ -274,6 +274,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Changelog
 
+### v1.0.7
+- 📝 Updated Plugin for latest version.
 
 ### v1.0.6
 - 📝 Updated the README to properly display the YouTube preview image in Any documentation.

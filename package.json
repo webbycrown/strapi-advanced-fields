@@ -1,6 +1,6 @@
 {
   "name": "@webbycrown/advanced-fields",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "keywords": [
     "strapi",
     "plugin",
@@ -22,13 +22,17 @@
       "require": "./dist/admin/index.js",
       "default": "./dist/admin/index.js"
     },
-    "./strapi-server": "./strapi-server.js"
+    "./strapi-server": {
+      "source": "./server/index.js",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
   },
-  "files": [  
-    "dist", 
+  "files": [
+    "dist",
     "README.md",
-    "LICENSE",
-    "assets"
+    "LICENSE"
   ],
   "scripts": {
     "build": "npm run build:admin",

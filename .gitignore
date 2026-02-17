@@ -1,35 +1,30 @@
-# Dependencies
+# Node
 node_modules/
 
-# Builds and bundles
-dist/
-build/
-.cache/
-.tmp/
+# Build output (optional if you want to ignore dist)
+# dist/
 
-admin
-# Testing
-coverage/
-.npmignore
+# Source - not in repo; plugin distributes via dist/ only
+admin/
+server/
 
-# Documentation
-CHANGELOG.md
-CONTRIBUTING.md
-
-# Environment and local config
-.env
-.env.*  
-.eslintcache
-.turbo/
-
-# Editors / OS
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
+# Docs / Markdown files (ignored as requested)
+AUDIO_SCRIPT
+CHANGELOG
+CONTRIBUTING
 
 # Logs
 npm-debug.log*
+yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# Optional: lock file (if you don't want to push it)
+# package-lock.json
