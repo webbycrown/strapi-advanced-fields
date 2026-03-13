@@ -1,17 +1,8 @@
 # Node
 node_modules/
 
-# Build output (optional if you want to ignore dist)
+# Build output is included in repo so npm install from git works
 # dist/
-
-# Source - not in repo; plugin distributes via dist/ only
-admin/
-server/
-
-# Docs / Markdown files (ignored as requested)
-AUDIO_SCRIPT
-CHANGELOG
-CONTRIBUTING
 
 # Logs
 npm-debug.log*
