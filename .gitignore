@@ -1,8 +1,12 @@
 # Node
 node_modules/
 
-# Build output is included in repo so npm install from git works
+# Build output (dist is committed so npm install from git works)
 # dist/
+
+# Source folders - plugin distributes via dist/ only
+admin/
+server/
 
 # Logs
 npm-debug.log*
