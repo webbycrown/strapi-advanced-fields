@@ -383,6 +383,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 🔤 Advanced Input field with validation
 - ☑️ Advanced Checkbox (single/multiple)
 - 🔘 Advanced Radio (single/multiple)
+- 🧩 Advanced Enumeration (single/multiple)
 - 🎨 Multiple layout options
 - ✅ Comprehensive validation system
 - 📝 Field notes support for all field types
