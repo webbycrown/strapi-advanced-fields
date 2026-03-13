@@ -117,6 +117,38 @@ const AdvancedRadioIcon = () => /* @__PURE__ */ jsx(
     )
   }
 );
+const AdvancedEnumerationIcon = () => /* @__PURE__ */ jsx(
+  Box,
+  {
+    style: {
+      width: "28px",
+      height: "28px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#f8f9fa",
+      borderRadius: "6px",
+      border: "1px solid #e9ecef"
+    },
+    children: /* @__PURE__ */ jsxs(
+      "svg",
+      {
+        width: "18",
+        height: "18",
+        viewBox: "0 0 32 32",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg",
+        children: [
+          /* @__PURE__ */ jsx("rect", { width: "32", height: "32", rx: "6", fill: "#4945FF", fillOpacity: "0.1" }),
+          /* @__PURE__ */ jsx("rect", { x: "0.5", y: "0.5", width: "31", height: "31", rx: "5.5", stroke: "#4945FF", strokeOpacity: "0.15" }),
+          /* @__PURE__ */ jsx("path", { d: "M12 11H25V13H12V11ZM12 15H25V17H12V15ZM12 19H25V21H12V19ZM7 11H10V13H7V11ZM7 15H10V17H7V15ZM7 19H10V21H7V19Z", fill: "#4945FF" }),
+          /* @__PURE__ */ jsx("mask", { id: "path-4-inside-1_649_89_enum", fill: "white", children: /* @__PURE__ */ jsx("path", { d: "M0 6C0 2.68629 2.68629 0 6 0H10V10H0V6Z" }) }),
+          /* @__PURE__ */ jsx("path", { d: "M-2 6C-2 1.58172 1.58172 -2 6 -2H10V2H6C3.79086 2 2 3.79086 2 6H-2ZM10 10H0H10ZM-2 10V6C-2 1.58172 1.58172 -2 6 -2V2C3.79086 2 2 3.79086 2 6V10H-2ZM10 0V10V0Z", fill: "#4945FF", mask: "url(#path-4-inside-1_649_89_enum)" })
+        ]
+      }
+    )
+  }
+);
 const customFields = [
   {
     name: "input",
@@ -784,6 +816,165 @@ const customFields = [
               placeholder: {
                 id: `${PLUGIN_ID}.radio.options.fieldNote.placeholder`,
                 defaultMessage: "Enter a note for this field"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    name: "enumeration",
+    type: "json",
+    icon: AdvancedEnumerationIcon,
+    pluginId: PLUGIN_ID,
+    component: () => import("../_chunks/index-BYdUTGX8.mjs"),
+    intlLabel: {
+      id: `${PLUGIN_ID}.enumeration.label`,
+      defaultMessage: "Advanced Enumeration"
+    },
+    intlDescription: {
+      id: `${PLUGIN_ID}.enumeration.description`,
+      defaultMessage: "Advanced enumeration field allowing predefined multi-selections dropdowns"
+    },
+    getDisplayValue: (value, field) => {
+      if (!value || !Array.isArray(value) || value.length === 0) {
+        return "";
+      }
+      const options = field?.options?.enumOptions || "";
+      const optionMap = {};
+      if (options) {
+        options.split("\n").forEach((opt) => {
+          const [val, label] = opt.split("|");
+          if (val && label) {
+            optionMap[val.trim()] = label.trim();
+          }
+        });
+      }
+      const displayValues = value.map((val) => optionMap[val] || val);
+      return displayValues.join(", ");
+    },
+    options: {
+      base: [],
+      advanced: [
+        {
+          sectionTitle: {
+            id: `${PLUGIN_ID}.enumeration.settings.advanced.label`,
+            defaultMessage: "Advanced Settings"
+          },
+          items: [
+            {
+              name: "required",
+              type: "checkbox",
+              intlLabel: {
+                id: `${PLUGIN_ID}.enumeration.options.required.label`,
+                defaultMessage: "Required Field"
+              },
+              description: {
+                id: `${PLUGIN_ID}.enumeration.options.required.description`,
+                defaultMessage: "This field must be filled before saving"
+              }
+            },
+            {
+              name: "options.enumOptions",
+              type: "textarea",
+              intlLabel: {
+                id: `${PLUGIN_ID}.enumeration.options.enumOptions.label`,
+                defaultMessage: "Enumeration Options"
+              },
+              description: {
+                id: `${PLUGIN_ID}.enumeration.options.enumOptions.description`,
+                defaultMessage: "Define available options (one per line: value|label)"
+              },
+              placeholder: {
+                id: `${PLUGIN_ID}.enumeration.options.enumOptions.placeholder`,
+                defaultMessage: "value1|Label 1\nvalue2|Label 2"
+              }
+            },
+            {
+              name: "options.defaultSelected",
+              type: "textarea",
+              intlLabel: {
+                id: `${PLUGIN_ID}.enumeration.options.defaultSelected.label`,
+                defaultMessage: "Default Selected"
+              },
+              description: {
+                id: `${PLUGIN_ID}.enumeration.options.defaultSelected.description`,
+                defaultMessage: "Pre-selected options (one per line)"
+              },
+              placeholder: {
+                id: `${PLUGIN_ID}.enumeration.options.defaultSelected.placeholder`,
+                defaultMessage: "value1\nvalue2"
+              }
+            },
+            {
+              name: "options.minChoices",
+              type: "number",
+              intlLabel: {
+                id: `${PLUGIN_ID}.enumeration.options.minChoices.label`,
+                defaultMessage: "Minimum Choices"
+              },
+              description: {
+                id: `${PLUGIN_ID}.enumeration.options.minChoices.description`,
+                defaultMessage: "Minimum number of options that must be selected"
+              },
+              defaultValue: 0
+            },
+            {
+              name: "options.maxChoices",
+              type: "number",
+              intlLabel: {
+                id: `${PLUGIN_ID}.enumeration.options.maxChoices.label`,
+                defaultMessage: "Maximum Choices"
+              },
+              description: {
+                id: `${PLUGIN_ID}.enumeration.options.maxChoices.description`,
+                defaultMessage: "Maximum number of options that can be selected"
+              },
+              defaultValue: 0
+            },
+            {
+              name: "options.customErrorMessage",
+              type: "text",
+              intlLabel: {
+                id: `${PLUGIN_ID}.enumeration.options.customErrorMessage.label`,
+                defaultMessage: "Custom Error Message"
+              },
+              description: {
+                id: `${PLUGIN_ID}.enumeration.options.customErrorMessage.description`,
+                defaultMessage: "Custom error message for validation failures"
+              },
+              placeholder: {
+                id: `${PLUGIN_ID}.enumeration.options.customErrorMessage.placeholder`,
+                defaultMessage: "Enter custom error message"
+              }
+            },
+            {
+              name: "options.fieldNote",
+              type: "text",
+              intlLabel: {
+                id: `${PLUGIN_ID}.enumeration.options.fieldNote.label`,
+                defaultMessage: "Field Note"
+              },
+              description: {
+                id: `${PLUGIN_ID}.enumeration.options.fieldNote.description`,
+                defaultMessage: "Add a helpful note that will appear below the field"
+              },
+              placeholder: {
+                id: `${PLUGIN_ID}.enumeration.options.fieldNote.placeholder`,
+                defaultMessage: "Enter a note for this field"
+              }
+            },
+            {
+              name: "private",
+              type: "checkbox",
+              intlLabel: {
+                id: `${PLUGIN_ID}.enumeration.options.private.label`,
+                defaultMessage: "Private Field"
+              },
+              description: {
+                id: `${PLUGIN_ID}.enumeration.options.private.description`,
+                defaultMessage: "Hide this field from API responses"
               }
             }
           ]

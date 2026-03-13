@@ -16,11 +16,12 @@ A short introduction and quick overview of **Advanced Fields for Strapi**, showc
 
 ▶️ **[Watch Full Video on YouTube](https://www.youtube.com/watch?v=-WRuUEWwGfk)**
 
----       
+---
 
 ## ✨ Features
 
 ### 🔤 Advanced Input
+
 - **Text Input Field**: Simple, clean text input with advanced validation
 - **Comprehensive Validation**: Min/max length, regex patterns, required fields
 - **Custom Error Messages**: User-friendly validation feedback
@@ -30,6 +31,7 @@ A short introduction and quick overview of **Advanced Fields for Strapi**, showc
 - **Private Fields**: Hide sensitive data from API responses
 
 ### ☑️ Advanced Checkbox
+
 - **Single & Multiple Modes**: Toggle between single checkbox or multiple selections
 - **Dynamic Options**: Define options with value|label format
 - **Min/Max Validation**: Control minimum and maximum selections
@@ -38,6 +40,7 @@ A short introduction and quick overview of **Advanced Fields for Strapi**, showc
 - **Field Notes**: Display helpful notes below the field
 
 ### 🔘 Advanced Radio
+
 - **Single & Multiple Selection**: Choose between single or multiple radio selections
 - **Dynamic Options**: Flexible option configuration
 - **Selection Limits**: Control minimum and maximum choices
@@ -45,14 +48,25 @@ A short introduction and quick overview of **Advanced Fields for Strapi**, showc
 - **Custom Validation**: Tailored error messages
 - **Field Notes**: Display helpful notes below the field
 
+### 🧩 Advanced Enumeration
+
+- **Multiple Enum Selection**: Select multiple predefined values
+- **Enum-style Options**: Maintain structured enum-like values
+- **Min/Max Selection Control**: Limit how many options can be selected
+- **Default Selected Values**: Preselect values for new entries
+- **Custom Validation**: Tailored error messages
+- **Field Notes**: Display helpful notes below the field
+
 ## 🛠️ Installation
 
 ### Via npm
+
 ```bash
 npm install @webbycrown/advanced-fields
 ```
 
 ### Via yarn
+
 ```bash
 yarn add @webbycrown/advanced-fields
 ```
@@ -66,7 +80,7 @@ yarn add @webbycrown/advanced-fields
    - Advanced Input
    - Advanced Checkbox
    - Advanced Radio
-
+   - Advanced Enumeration
 
 ## 📖 Usage Examples
 
@@ -122,52 +136,81 @@ yarn add @webbycrown/advanced-fields
 }
 ```
 
+### Advanced Enumeration Configuration
+
+```javascript
+// Example: Enumeration with dynamic options and field note
+{
+  "required": true,
+  "options": {
+    "enumOptions": "red|Red\nblue|Blue\ngreen|Green\nyellow|Yellow",
+    "defaultSelected": "red\nblue",
+    "minChoices": 1,
+    "customErrorMessage": "Please select at least one color",
+    "fieldNote": "You can select up to 3 colors"
+  }
+}
+```
+
 ## 🎯 Field Options Reference
 
 ### Advanced Input Options
 
-| Option | Type | Description | Default |
-|--------|------|-------------|---------|
-| `required` | boolean | Field is required | `false` |
-| `unique` | boolean | Values must be unique | `false` |
-| `maxLength` | number | Maximum character length | `0` (unlimited) |
-| `minLength` | number | Minimum character length | `0` |
-| `regex` | string | Validation pattern | `""` |
-| `options.defaultValue` | string | Pre-filled value | `""` |
-| `options.placeholder` | string | Placeholder text | `""` |
-| `options.customErrorMessage` | string | Custom error message | `""` |
-| `options.fieldNote` | string | Helpful note displayed below field | `""` |
-| `private` | boolean | Hide from API | `false` |
+| Option                       | Type    | Description                        | Default         |
+| ---------------------------- | ------- | ---------------------------------- | --------------- |
+| `required`                   | boolean | Field is required                  | `false`         |
+| `unique`                     | boolean | Values must be unique              | `false`         |
+| `maxLength`                  | number  | Maximum character length           | `0` (unlimited) |
+| `minLength`                  | number  | Minimum character length           | `0`             |
+| `regex`                      | string  | Validation pattern                 | `""`            |
+| `options.defaultValue`       | string  | Pre-filled value                   | `""`            |
+| `options.placeholder`        | string  | Placeholder text                   | `""`            |
+| `options.customErrorMessage` | string  | Custom error message               | `""`            |
+| `options.fieldNote`          | string  | Helpful note displayed below field | `""`            |
+| `private`                    | boolean | Hide from API                      | `false`         |
 
 ### Advanced Checkbox Options
 
-| Option | Type | Description | Default |
-|--------|------|-------------|---------|
-| `required` | boolean | Field is required | `false` |
-| `options.checkboxType` | string | `single` or `multiple` | `single` |
-| `options.checkboxOptions` | string | Options in `value\|label` format | `""` |
-| `options.defaultSelected` | string | Pre-selected options | `""` |
-| `options.minChoices` | number | Minimum selections | `0` |
-| `options.maxChoices` | number | Maximum selections | `0` |
-| `options.layout` | string | `vertical`, `horizontal`, or `grid` | `vertical` |
-| `options.customErrorMessage` | string | Custom error message | `""` |
-| `options.fieldNote` | string | Helpful note displayed below field | `""` |
-| `private` | boolean | Hide from API | `false` |
+| Option                       | Type    | Description                         | Default    |
+| ---------------------------- | ------- | ----------------------------------- | ---------- |
+| `required`                   | boolean | Field is required                   | `false`    |
+| `options.checkboxType`       | string  | `single` or `multiple`              | `single`   |
+| `options.checkboxOptions`    | string  | Options in `value\|label` format    | `""`       |
+| `options.defaultSelected`    | string  | Pre-selected options                | `""`       |
+| `options.minChoices`         | number  | Minimum selections                  | `0`        |
+| `options.maxChoices`         | number  | Maximum selections                  | `0`        |
+| `options.layout`             | string  | `vertical`, `horizontal`, or `grid` | `vertical` |
+| `options.customErrorMessage` | string  | Custom error message                | `""`       |
+| `options.fieldNote`          | string  | Helpful note displayed below field  | `""`       |
+| `private`                    | boolean | Hide from API                       | `false`    |
 
 ### Advanced Radio Options
 
-| Option | Type | Description | Default |
-|--------|------|-------------|---------|
-| `required` | boolean | Field is required | `false` |
-| `options.selectionType` | string | `single` or `multiple` | `single` |
-| `options.radioOptions` | string | Options in `value\|label` format | `""` |
-| `options.defaultSelected` | string | Pre-selected options | `""` |
-| `options.minChoices` | number | Minimum selections | `0` |
-| `options.maxChoices` | number | Maximum selections | `0` |
-| `options.layout` | string | `vertical`, `horizontal`, or `grid` | `vertical` |
-| `options.customErrorMessage` | string | Custom error message | `""` |
-| `options.fieldNote` | string | Helpful note displayed below field | `""` |
-| `private` | boolean | Hide from API | `false` |
+| Option                       | Type    | Description                         | Default    |
+| ---------------------------- | ------- | ----------------------------------- | ---------- |
+| `required`                   | boolean | Field is required                   | `false`    |
+| `options.selectionType`      | string  | `single` or `multiple`              | `single`   |
+| `options.radioOptions`       | string  | Options in `value\|label` format    | `""`       |
+| `options.defaultSelected`    | string  | Pre-selected options                | `""`       |
+| `options.minChoices`         | number  | Minimum selections                  | `0`        |
+| `options.maxChoices`         | number  | Maximum selections                  | `0`        |
+| `options.layout`             | string  | `vertical`, `horizontal`, or `grid` | `vertical` |
+| `options.customErrorMessage` | string  | Custom error message                | `""`       |
+| `options.fieldNote`          | string  | Helpful note displayed below field  | `""`       |
+| `private`                    | boolean | Hide from API                       | `false`    |
+
+### Advanced Enumeration Options
+
+| Option                       | Type    | Description                        | Default |
+| ---------------------------- | ------- | ---------------------------------- | ------- |
+| `required`                   | boolean | Field is required                  | `false` |
+| `options.enumOptions`        | string  | Options in `value\|label` format   | `""`    |
+| `options.defaultSelected`    | string  | Pre-selected options               | `""`    |
+| `options.minChoices`         | number  | Minimum selections                 | `0`     |
+| `options.maxChoices`         | number  | Maximum selections                 | `0`     |
+| `options.customErrorMessage` | string  | Custom error message               | `""`    |
+| `options.fieldNote`          | string  | Helpful note displayed below field | `""`    |
+| `private`                    | boolean | Hide from API                      | `false` |
 
 ## 🔧 API Usage
 
@@ -204,15 +247,38 @@ yarn add @webbycrown/advanced-fields
 }
 ```
 
+### Retrieving Data
+
+```javascript
+// GET /api/articles
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "title": "Sample Article",
+        "advancedInput": "user@example.com",
+        "advancedCheckbox": ["1", "2"],
+        "advancedRadio": ["medium"],
+        "advancedEnumeration": ["Red", "Green","Blue"]
+      }
+    }
+  ]
+}
+```
+
 ## 🎨 Layout Options
 
 ### Vertical Layout
+
 Options are stacked vertically for easy scanning.
 
 ### Horizontal Layout
+
 Options are arranged in a horizontal row for compact forms.
 
 ### Grid Layout
+
 Options are displayed in a responsive grid for better space utilization.
 
 ## ✅ Validation Features
@@ -274,33 +340,46 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Changelog
 
+### v1.0.8
+
+- ✨ Added new **Advanced Multiple Select Enumeration** field (supports selecting multiple enum values)
+- 📝 Updated plugin for the latest Strapi version
+
 ### v1.0.7
+
 - 📝 Updated Plugin for latest version.
 
 ### v1.0.6
+
 - 📝 Updated the README to properly display the YouTube preview image in Any documentation.
 
 ### v1.0.5
+
 - 📝 Updated the README to include the YouTube demo video link.
 
 ### v1.0.4
+
 - 🐛 Fixed minor bugs in field validation
 - 📝 Updated README to include Demo Video section
 - ⚡ Improved documentation clarity for plugin setup and usage
 
 ### v1.0.3
+
 - 📝 Documentation updates and minor formatting improvements.
 
 ### v1.0.2
+
 - 🐛 Fixed bugs.
 - 🛠️ Resolved minor issues affecting
 
 ### v1.0.1
+
 - 📝 Updated the README file.
 - ✨ Improved clarity and formatting for better readability.
 
 ### v1.0.0
-- ✨ Initial release  
+
+- ✨ Initial release
 - 🔤 Advanced Input field with validation
 - ☑️ Advanced Checkbox (single/multiple)
 - 🔘 Advanced Radio (single/multiple)
