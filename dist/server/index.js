@@ -40,6 +40,25 @@ const customFields = [
     }
   },
   {
+    name: "color",
+    type: "string",
+    validate: (value, { required, options = {} }) => {
+      const { customErrorMessage = "" } = options;
+      const stringValue = value === void 0 || value === null ? "" : String(value).trim();
+      if (required && !stringValue) {
+        return customErrorMessage || "This field is required";
+      }
+      if (!stringValue) {
+        return null;
+      }
+      const hexRegex = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
+      if (!hexRegex.test(stringValue)) {
+        return customErrorMessage || "Invalid color (use hex like #RRGGBB)";
+      }
+      return null;
+    }
+  },
+  {
     name: "checkbox",
     type: "json",
     validate: (value, { required, options = {} }) => {
