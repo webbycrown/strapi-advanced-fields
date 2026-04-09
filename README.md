@@ -1,8 +1,9 @@
 # 🚀 Advanced Fields for Strapi
 
-[![npm version](https://badge.fury.io/js/%40webbycrown%2Fadvanced-fields.svg)](https://badge.fury.io/js/%40webbycrown%2Fadvanced-fields)
+[![npm version](https://img.shields.io/badge/npm-1.0.9-CB3837?style=flat-square&logo=npm)](https://www.npmjs.com/package/@webbycrown/advanced-fields)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Strapi](https://img.shields.io/badge/Strapi-5.x-blue.svg)](https://strapi.io/)
+[![Strapi Market](https://img.shields.io/badge/Strapi%20Market-Plugin-7A5AF8?style=flat-square&logo=strapi)](https://market.strapi.io/plugins/@webbycrown-advanced-fields)
 
 Professional custom fields for Strapi CMS that provide advanced functionality with comprehensive validation, dynamic options, and user-friendly interfaces.
 
@@ -30,6 +31,22 @@ A short introduction and quick overview of **Advanced Fields for Strapi**, showc
 ▶️ **[Watch Full Video on YouTube](https://www.youtube.com/watch?v=-WRuUEWwGfk)**
 
 ---
+
+## 🛠️ Installation
+
+### Via npm
+
+```bash
+npm install @webbycrown/advanced-fields
+```
+
+### Via yarn
+
+```bash
+yarn add @webbycrown/advanced-fields
+```
+
+
 
 ## ✨ Features
 
@@ -80,19 +97,6 @@ A short introduction and quick overview of **Advanced Fields for Strapi**, showc
 - **Palette Options**: Provide predefined color sets
 - **Validation Rules**: Restrict allowed formats or values
 
-## 🛠️ Installation
-
-### Via npm
-
-```bash
-npm install @webbycrown/advanced-fields
-```
-
-### Via yarn
-
-```bash
-yarn add @webbycrown/advanced-fields
-```
 
 ## ⚙️ Configuration
 
