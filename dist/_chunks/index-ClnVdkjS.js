@@ -1144,7 +1144,7 @@ const index = {
             defaultMessage: "Configure"
           },
           Component: async () => {
-            const { default: SettingsPage } = await Promise.resolve().then(() => require("./index-B7AItLuX.js"));
+            const { default: SettingsPage } = await Promise.resolve().then(() => require("./index-CaEWvvZV.js"));
             return SettingsPage;
           },
           permissions: []

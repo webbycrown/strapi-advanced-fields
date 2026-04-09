@@ -1143,7 +1143,7 @@ const index = {
             defaultMessage: "Configure"
           },
           Component: async () => {
-            const { default: SettingsPage } = await import("./index-k2NnC4R6.mjs");
+            const { default: SettingsPage } = await import("./index-BIX3GMgH.mjs");
             return SettingsPage;
           },
           permissions: []

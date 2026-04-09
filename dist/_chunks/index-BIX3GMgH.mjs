@@ -2,8 +2,8 @@ import { jsxs, jsx, Fragment } from "react/jsx-runtime";
 import { Page, Layouts } from "@strapi/strapi/admin";
 import { Grid, Flex, Box, Typography, Link, Divider } from "@strapi/design-system";
 import { Phone, Mail } from "@strapi/icons";
-import { P as PLUGIN_ID } from "./index-CAsMD5Or.mjs";
-const version = "1.0.8";
+import { P as PLUGIN_ID } from "./index-D2fdW_nl.mjs";
+const version = "1.0.9";
 const pluginPackage = {
   version
 };
@@ -120,6 +120,7 @@ const StepCard = ({ index, text }) => /* @__PURE__ */ jsxs(
     hasRadius: true,
     padding: 4,
     shadow: "tableShadow",
+    style: { width: "100%" },
     children: [
       /* @__PURE__ */ jsx(
         Box,
@@ -199,7 +200,7 @@ const SettingsPage = () => {
             " ",
             currentVersion
           ] }),
-          /* @__PURE__ */ jsx(Box, { paddingTop: 2, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "success600", children: "You are on the latest version." }) })
+          /* @__PURE__ */ jsx(Box, { paddingTop: 2, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "warning600", children: "Update available. Please consider upgrading to the latest version." }) })
         ] }) }),
         /* @__PURE__ */ jsx(Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsx(SectionCard, { title: "How to Use", children: /* @__PURE__ */ jsx(Grid.Root, { gap: 4, children: HOW_TO_USE.map((step, idx) => /* @__PURE__ */ jsx(Grid.Item, { col: 6, s: 12, xs: 12, children: /* @__PURE__ */ jsx(StepCard, { index: idx + 1, text: step }) }, step)) }) }) }),
         /* @__PURE__ */ jsx(Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsx(SectionCard, { title: "2. Modules & Features", children: /* @__PURE__ */ jsx(Box, { children: MODULE_FEATURES.map((feature, index) => /* @__PURE__ */ jsx(Box, { paddingBottom: 6, children: /* @__PURE__ */ jsx(Grid.Root, { gap: 6, children: index % 2 === 0 ? /* @__PURE__ */ jsxs(Fragment, { children: [

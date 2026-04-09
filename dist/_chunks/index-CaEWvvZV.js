@@ -4,8 +4,8 @@ const jsxRuntime = require("react/jsx-runtime");
 const admin = require("@strapi/strapi/admin");
 const designSystem = require("@strapi/design-system");
 const icons = require("@strapi/icons");
-const index = require("./index-Baj2MiK4.js");
-const version = "1.0.8";
+const index = require("./index-ClnVdkjS.js");
+const version = "1.0.9";
 const pluginPackage = {
   version
 };
@@ -122,6 +122,7 @@ const StepCard = ({ index: index2, text }) => /* @__PURE__ */ jsxRuntime.jsxs(
     hasRadius: true,
     padding: 4,
     shadow: "tableShadow",
+    style: { width: "100%" },
     children: [
       /* @__PURE__ */ jsxRuntime.jsx(
         designSystem.Box,
@@ -201,7 +202,7 @@ const SettingsPage = () => {
             " ",
             currentVersion
           ] }),
-          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 2, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "success600", children: "You are on the latest version." }) })
+          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 2, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "warning600", children: "Update available. Please consider upgrading to the latest version." }) })
         ] }) }),
         /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(SectionCard, { title: "How to Use", children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Root, { gap: 4, children: HOW_TO_USE.map((step, idx) => /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 6, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(StepCard, { index: idx + 1, text: step }) }, step)) }) }) }),
         /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(SectionCard, { title: "2. Modules & Features", children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { children: MODULE_FEATURES.map((feature, index2) => /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingBottom: 6, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Root, { gap: 6, children: index2 % 2 === 0 ? /* @__PURE__ */ jsxRuntime.jsxs(jsxRuntime.Fragment, { children: [

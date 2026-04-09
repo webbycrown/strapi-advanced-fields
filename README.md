@@ -6,7 +6,20 @@
 
 Professional custom fields for Strapi CMS that provide advanced functionality with comprehensive validation, dynamic options, and user-friendly interfaces.
 
-📦 **NPM Package**: [@webbycrown/advanced-fields](https://www.npmjs.com/package/@webbycrown/advanced-fields)
+**NPM Package**: [@webbycrown/advanced-fields](https://www.npmjs.com/package/@webbycrown/advanced-fields)
+
+**Strapi Market**: https://market.strapi.io/plugins/@webbycrown-advanced-fields
+
+
+## 📘 User Guide
+
+📺 **Learn how to use Advanced Fields in Strapi with our step-by-step guide**
+
+[![Open User Guide](https://img.shields.io/badge/Open%20User%20Guide-Getting%20Started-2563eb?style=for-the-badge)](https://www.webbycrown.com/guides/advanced-fields-for-strapi/implementation-guide)
+
+Direct link: https://www.webbycrown.com/guides/advanced-fields-for-strapi/implementation-guide
+
+---
 
 ## 🎥 Overview & Usage Demo
 
@@ -57,6 +70,16 @@ A short introduction and quick overview of **Advanced Fields for Strapi**, showc
 - **Custom Validation**: Tailored error messages
 - **Field Notes**: Display helpful notes below the field
 
+### 🎨 Advanced ColorPicker
+
+- **Multiple Color Formats**: HEX, RGB, RGBA, HSL support
+- **Color Picker UI**: Modern interactive color selector
+- **Manual Input Support**: Enter custom color values
+- **Opacity Control**: RGBA alpha transparency support
+- **Default Color**: Predefine color for new entries
+- **Palette Options**: Provide predefined color sets
+- **Validation Rules**: Restrict allowed formats or values
+
 ## 🛠️ Installation
 
 ### Via npm
@@ -81,6 +104,7 @@ yarn add @webbycrown/advanced-fields
    - Advanced Checkbox
    - Advanced Radio
    - Advanced Enumeration
+   - Advanced ColorPicker
 
 ## 📖 Usage Examples
 
@@ -152,6 +176,24 @@ yarn add @webbycrown/advanced-fields
 }
 ```
 
+### Advanced Color Configuration
+
+```javascript
+// Example: Color picker with default value and validation
+{
+  "required": true,
+  "options": {
+    "format": "hex", // hex | rgb | rgba | hsl
+    "allowOpacity": true,
+    "defaultValue": "#3498db",
+    "presetColors": "#ff0000\n#00ff00\n#0000ff\n#ffffff\n#000000",
+    "customErrorMessage": "Please select a valid color",
+    "fieldNote": "You can choose or enter a custom color"
+  }
+}
+
+```
+
 ## 🎯 Field Options Reference
 
 ### Advanced Input Options
@@ -211,6 +253,21 @@ yarn add @webbycrown/advanced-fields
 | `options.customErrorMessage` | string  | Custom error message               | `""`    |
 | `options.fieldNote`          | string  | Helpful note displayed below field | `""`    |
 | `private`                    | boolean | Hide from API                      | `false` |
+
+
+## 🎯 Field Options Reference (Advanced Color)
+
+| Option                        | Type    | Description                               | Default |
+|-------------------------------|---------|-------------------------------------------|---------|
+| `required`                    | boolean | Field is required                         | `false` |
+| `options.format`              | string  | `hex`, `rgb`, `rgba`, `hsl`               | `hex`   |
+| `options.allowOpacity`        | boolean | Enable alpha (RGBA)                       | `false` |
+| `options.defaultValue`        | string  | Default color value                       | `""`    |
+| `options.presetColors`        | string  | Preset colors (newline separated)         | `""`    |
+| `options.customErrorMessage`  | string  | Custom validation message                 | `""`    |
+| `options.fieldNote`           | string  | Helpful note below field                  | `""`    |
+| `private`                     | boolean | Hide from API                             | `false` |
+
 
 ## 🔧 API Usage
 
@@ -339,6 +396,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to all contributors and users
 
 ## 📊 Changelog
+
+### v1.0.9
+
+- 🎨 Introduced **Advanced Color Field**
+- 🌈 Added support for HEX, RGB, RGBA, and HSL formats
+- 🧩 Integrated color picker UI with preset colors
+- 🌫️ Enabled opacity control and validation support
 
 ### v1.0.8
 

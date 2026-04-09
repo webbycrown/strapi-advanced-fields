@@ -1,6 +1,6 @@
 {
   "name": "@webbycrown/advanced-fields",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "keywords": [
     "strapi",
     "plugin",
@@ -76,7 +76,8 @@
     "email": "info@webbycrown.com",
     "url": "https://webbycrown.com"
   },
-  "homepage": "https://github.com/webbycrown/strapi-advanced-fields",
+  "homepage": "https://www.webbycrown.com/guides/advanced-fields-for-strapi/implementation-guide",
+  "documentation": "https://www.webbycrown.com/guides/advanced-fields-for-strapi/implementation-guide",
   "repository": {
     "type": "git",
     "url": "https://github.com/webbycrown/strapi-advanced-fields.git"
